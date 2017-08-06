@@ -1,130 +1,108 @@
-$(function(){
+$(function() {
 	//banner高度
-	$("#section-1st").css("height",$(window).height());
-	
-	$("#section-1st").mousemove(function(e){
-	    var n = (e.pageX - $(document).width()/2)/150;
-	   $("#section-1st .sec-1st-bg").css("transform", "rotateY("+n+"deg)");
+	$("#section-1st").css("height", $(window).height());
+
+	$("#section-1st").mousemove(function(e) {
+		var n = (e.pageX - $(document).width() / 2) / 150;
+		$("#section-1st .sec-1st-bg").css("transform", "rotateY(" + n + "deg)");
 	});
-	
-	
-	
+
 	//导航条 返回顶部
-	$(window).scroll(function(){
-		if($(window).scrollTop() > 300){
+	$(window).scroll(function() {
+		if($(window).scrollTop() > 300) {
 			$(".navbar").slideDown();
 			$(".toTop").fadeIn();
-		}
-		else{
+		} else {
 			$(".navbar").slideUp();
 			$(".toTop").fadeOut();
 		}
 	})
-	
-	$(".toTop").click(function(){
+
+	$(".toTop").click(function() {
 		$("body").animate({
-			scrollTop:0
-		},500)
+			scrollTop: 0
+		}, 500)
 	})
-	
-	
-	
-	
-	
+
 	//瀑布流
 	var margin = 22; //间距
 	var li = $("#imgs li");
 	var li_W = li[0].offsetWidth;
-	
-	function waterfall(){
-		h = [];   //放高度
-		n = $("#imgs").width()/li_W|0;    //每排放的图片个数
-		for(var i=0; i<li.length;i++){
-			li_H = li[i].offsetHeight;   //获取每个li的高度
-			if(i<n){
+
+	function waterfall() {
+		h = []; //放高度
+		n = $("#imgs").width() / li_W | 0; //每排放的图片个数
+		for(var i = 0; i < li.length; i++) {
+			li_H = li[i].offsetHeight; //获取每个li的高度
+			if(i < n) {
 				h[i] = li_H;
-				li.eq(i).css("top",0);   //设置第一行的高度
-				li.eq(i).css("left",li_W*i);
-			}
-			else{
-				min_H = Math.min.apply(null,h);   //获取最小高度
-				minkey = getkey(h,min_H);  		 //获取最小高度的指针
-				h[minkey] += li_H+margin;         //加上新高度后更新高度值
-				li.eq(i).css("top",min_H+margin);   
-				li.eq(i).css("left",minkey*li_W);
+				li.eq(i).css("top", 0); //设置第一行的高度
+				li.eq(i).css("left", li_W * i);
+			} else {
+				min_H = Math.min.apply(null, h); //获取最小高度
+				minkey = getkey(h, min_H); //获取最小高度的指针
+				h[minkey] += li_H + margin; //加上新高度后更新高度值
+				li.eq(i).css("top", min_H + margin);
+				li.eq(i).css("left", minkey * li_W);
 			}
 		}
 		$("#imgs").height(h.max() + "px");
-		
+
 	};
-	
-	
+
 	//使用for in运算返回数组中某一值的对应项数
-	function getkey(s,v){
-		for(k in s){
-			if(s[k]==v){
+	function getkey(s, v) {
+		for(k in s) {
+			if(s[k] == v) {
 				return k;
 			}
 		}
 	};
-	
+
 	//获取最长高度
-	Array.prototype.max = function(){
+	Array.prototype.max = function() {
 		var maxH = 0;
-		for(var i=0;i<this.length;i++){
-			maxH = Math.max(maxH,this[i]);
+		for(var i = 0; i < this.length; i++) {
+			maxH = Math.max(maxH, this[i]);
 		}
 		return maxH;
 	};
-	
-	
-	/*这里一定要用onload，因为图片不加载完就不知道高度值*/
-	window.onload = function() {waterfall();};
-	/*浏览器窗口改变时也运行函数*/
-	window.onresize = function() {waterfall();};
-	
-	
-	
-	//音乐播放控制
-	
 
-	
+	/*这里一定要用onload，因为图片不加载完就不知道高度值*/
+	window.onload = function() {
+		waterfall();
+	};
+	/*浏览器窗口改变时也运行函数*/
+	window.onresize = function() {
+		waterfall();
+	};
+
+	//音乐播放控制
 
 });
 
-
-
-
-
 // skills chart
-	$(document).ready(function(e) {
-	var index=0;
-	$(document).scroll(function(){
+$(document).ready(function(e) {
+	var index = 0;
+	$(document).scroll(function() {
 		var top = $(window).scrollTop() + $('#process1').height();
-		if($('#process1').offset().top < top){
-			if(index==0){	
-				$('.chart').easyPieChart({	
+		if($('#process1').offset().top < top) {
+			if(index == 0) {
+				$('.chart').easyPieChart({
 					barColor: '#E87E04',
-					trackColor:'#fff',
+					trackColor: '#fff',
 					easing: 'easeOutBounce',
-					lineCap: 'butt',  
+					lineCap: 'butt',
 					onStep: function(from, to, percent) {
 						$(this.el).find('.percent').text(Math.round(percent));
 					}
 				});
-			
-				}
+
+			}
 			index++;
 		}
 	})
-	});
-
-
-
-
-
-
-
+});
 
 /*
 
@@ -199,4 +177,3 @@ $(function(){
 });
 	
 	*/
-

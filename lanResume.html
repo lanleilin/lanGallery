@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html>
+
 	<head>
 		<meta charset="utf-8" />
 		<title>个人网页</title>
-		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
-		<link rel="stylesheet" type="text/css" href="css/animate.min.css"/>
-		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/animate.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
 		<link rel="icon" type="image/x-icon" href="img/logo2.png">
 	</head>
 	<script type="text/javascript">
-
-		(function(){
-					    	var html = document.documentElement;
-		    	var hWidth = html.getBoundingClientRect().width;
-				html.style.fontSize = hWidth/70 + "px";
-				console.log(hWidth);
+		(function() {
+			var html = document.documentElement;
+			var hWidth = html.getBoundingClientRect().width;
+			html.style.fontSize = hWidth / 70 + "px";
+			console.log(hWidth);
 		})();
 	</script>
+
 	<body>
 		<div class="navbar navbar-fixed-top">
 			<div class="container">
@@ -30,22 +31,36 @@
 				</div>
 				<div class="navbar-collapse collapse">
 					<ul class="nav navbar-nav">
-						<li><a href="#section-2nd">基本信息</a></li>
-						<li><a href="#section-3rd">教育背景</a></li>
-						<li><a href="#section-4th">工作经验</a></li>
-						<li><a href="#section-5th">掌握技能</a></li>
-						<li><a href="#section-6th">作品展示</a></li>
-						<li><a href="#section-7th">图片展示</a></li>
-						<li><a href="#section-8th">联系方式</a></li>
+						<li>
+							<a href="#section-2nd">基本信息</a>
+						</li>
+						<li>
+							<a href="#section-3rd">教育背景</a>
+						</li>
+						<li>
+							<a href="#section-4th">工作经验</a>
+						</li>
+						<li>
+							<a href="#section-5th">掌握技能</a>
+						</li>
+						<li>
+							<a href="#section-6th">作品展示</a>
+						</li>
+						<li>
+							<a href="#section-7th">图片展示</a>
+						</li>
+						<li>
+							<a href="#section-8th">联系方式</a>
+						</li>
 					</ul>
 				</div>
 			</div>
 		</div>
-		
+
 		<!--返回顶部-->
 		<div class="toTop"><span></span></div>
 		<div id="music" class="music">
-			<audio id="music-audio" class="audio" src="http://lxcdn.rabbitpre.com/531715f7-da56-48ba-8714-3ad383426d5d" loop="loop"  preload="none"></audio>
+			<audio id="music-audio" class="audio" src="http://lxcdn.rabbitpre.com/531715f7-da56-48ba-8714-3ad383426d5d" loop="loop" preload="none"></audio>
 			<div class="control">
 				<div class="control-after"></div>
 			</div>
@@ -53,26 +68,26 @@
 		<script type="text/javascript">
 			oV = document.getElementById('music-audio');
 			oC = document.querySelector('.control');
-//			oM = document.getElementById('music');
-			
-			oC.onclick = function(){
-				if(oV.paused){
+			//			oM = document.getElementById('music');
+
+			oC.onclick = function() {
+				if(oV.paused) {
 					oV.play();
 					$('#music').removeClass('stopped')
-				}else{
+				} else {
 					oV.pause();
 					$('#music').addClass('stopped')
 				}
-				
+
 			};
 		</script>
 		<!--大图-->
 		<div id="section-1st">
-									<div align="center">
-			<canvas id="q"></canvas>
-		</div>
+			<div align="center">
+				<canvas id="q"></canvas>
+			</div>
 			<div class="container-fluid">
-				
+
 				<div class="inf wow fadeInUp">
 					<h2>兰磊林</h2>
 					<p>前端开发工程师</p>
@@ -81,8 +96,7 @@
 
 			</div>
 		</div>
-		
-		
+
 		<div class="content">
 			<div class="met-index-body" id="section-2nd">
 				<div class="container">
@@ -100,17 +114,17 @@
 							</li>
 							<li class="col-lg-3 col-md-4 col-sm-5 col-xs-12 wow fadeInRightBig">
 								<p>&nbsp;</p>
-								<p>出生日期：<span>1994.11.10</span></p>	
+								<p>出生日期：<span>1994.11.10</span></p>
 								<p>毕业院校：<span>南昌航空大学</span></p>
 								<p>英语：<span>六级，读写流利</span></p>
 								<p>兴趣：<span>编程，英语，游泳</span></p>
 							</li>
 							<li class="col-lg-3 col-md-2 col-sm-1"></li>
 						</ul>
-					</div>	
+					</div>
 				</div>
 			</div>
-			
+
 			<div class="met-index-body" id="section-3rd">
 				<div class="lazy">
 					<div class="container">
@@ -133,14 +147,14 @@
 										<p>大学四六级证书；国家卓越工程师证书</p>
 									</div>
 								</li>
-								
+
 								</li>
 							</ul>
 						</div>
 					</div>
 				</div>
 			</div>
-			
+
 			<div class="met-index-body" id="section-4th">
 				<!--<div class="bg-gif"></div>
 				<div class="bg-cloud"></div>-->
@@ -158,21 +172,21 @@
 									<h4>南昌云端网络科技有限公司</h4>
 									<p class="role">web前端开发工程师</p>
 									<p class="time">2016.10—2017.5</p>
-									<p class="des">1  使用 html5、css3，Less ，zepto，jQuery等技术制作网页</br>
-										2  前后端分离，使用AJAX与后台交互，编写JS控件；</br>
-										3  使用git进行版本控制；webpack作为构建工具，nodejs作为服务端；</br>
-										4  用vue.js开发前端功能组件,使用animate.css实现动画效果；</br>
-										5  优化前端代码的质量，包括体验和响应速度；</br>
+									<p class="des">1 使用 html5、css3，Less ，zepto，jQuery等技术制作网页</br>
+										2 前后端分离，使用AJAX与后台交互，编写JS控件；</br>
+										3 使用git进行版本控制；webpack作为构建工具，nodejs作为服务端；</br>
+										4 用vue.js开发前端功能组件,使用animate.css实现动画效果；</br>
+										5 优化前端代码的质量，包括体验和响应速度；</br>
 									</p>
 								</div>
 							</div>
-							
+
 						</div>
 					</div>
 				</div>
 			</div>
-			
-			<div class="met-index-body" id="section-5th" >
+
+			<div class="met-index-body" id="section-5th">
 				<div class="container">
 					<h3 class="wow fadeInUp">掌握技能</h3>
 					<p class="desc wow fadeIn">
@@ -181,80 +195,78 @@
 						3，熟练使用LESS,SCSS,熟练Bootstrap搭建响应式网站；熟练使用Jquery,zepto；</br>
 						4，熟练Javascript面向对象编程, 能独立编写JS控件;</br>
 						5，熟悉VueJS, 掌握Element-UI，熟悉nodejs,webpack等常用开发工具； </br>
-						6,  熟悉Hbuilder,WebStrom，PS等工具的使用，熟练git的使用；</br>
+						6, 熟悉Hbuilder,WebStrom，PS等工具的使用，熟练git的使用；</br>
 						7，了解Express后端框架，了解Mongodb数据库；</br>
-						8,  乐于优化web性能，无障碍阅读中英文文档；</br>
+						8, 乐于优化web性能，无障碍阅读中英文文档；</br>
 					</p>
-					
+
 					<div class="main">
 						<ul class="row">
 							<li class="col-xs-12 col-sm-6  col-md-3  skill wow fadeInDown ">
 								<span class="chart" data-percent="80">
 									<span class="percent" ></span>
-									<canvas id="process1" width="152" height="152"></canvas>
+								<canvas id="process1" width="152" height="152"></canvas>
 								</span>
 								<h4>HTML5</h4>
 							</li>
 							<li class="col-xs-12 col-sm-6 col-md-3  skill wow fadeInDown">
 								<span class="chart" data-percent="80">
 									<span class="percent"></span>
-									<canvas width="152" height="152"></canvas>
+								<canvas width="152" height="152"></canvas>
 								</span>
 								<h4>CSS3</h4>
 							</li>
 							<li class="col-xs-12 col-sm-6 col-md-3  skill wow flipInX">
 								<span class="chart" data-percent="80">
 									<span class="percent"></span>
-									<canvas width="152" height="152"></canvas>
+								<canvas width="152" height="152"></canvas>
 								</span>
 								<h4>JS</h4>
 							</li>
 							<li class="col-xs-12  col-sm-6  col-md-3  skill wow fadeInRight">
 								<span class="chart" data-percent="80">
 									<span class="percent" ></span>
-									<canvas width="152" height="152"></canvas>
+								<canvas width="152" height="152"></canvas>
 								</span>
 								<h4>jQuery</h4>
 							</li>
 							<li class="col-xs-12 col-sm-6 col-md-3  skill wow fadeInDown">
 								<span class="chart" data-percent="70">
 									<span class="percent"></span>
-									<canvas width="152" height="152"></canvas>
+								<canvas width="152" height="152"></canvas>
 								</span>
 								<h4>Bootstrap</h4>
 							</li>
 							<li class="col-xs-12 col-sm-6  col-md-3 skill wow fadeInDown">
 								<span class="chart" data-percent="60">
 									<span class="percent"></span>
-									<canvas width="152" height="152"></canvas>
+								<canvas width="152" height="152"></canvas>
 								</span>
 								<h4>NodeJS</h4>
 							</li>
-							
+
 							<li class="col-xs-12 col-sm-6  col-md-3  skill wow  flipInX">
 								<span class="chart" data-percent="70">
 									<span class="percent" ></span>
-									<canvas width="152" height="152"></canvas>
+								<canvas width="152" height="152"></canvas>
 								</span>
 								<h4>VueJS</h4>
 							</li>
 							<li class="col-xs-12 col-sm-6 col-md-3 skill wow fadeInRight">
 								<span class="chart" data-percent="60">
 									<span class="percent" ></span>
-									<canvas width="152" height="152"></canvas>
+								<canvas width="152" height="152"></canvas>
 								</span>
 								<h4>Photoshop</h4>
 							</li>
-							
+
 						</ul>
 					</div>
 				</div>
 			</div>
-			
-			
+
 			<!----------------------------------------------------------->
-			
-			
+
 			<div class="met-index-body" id="section-6th">
 				<div class="container">
 					<h3 class="wow fadeInUp">作品展示</h3>
@@ -281,10 +293,9 @@
 						</ul>
 					</div>
 				</div>
-				
+
 			</div>
-			
-			
+
 			<!----------------------------------------------------------->
 			<div class="met-index-body" id="section-7th">
 				<div class="container">
@@ -300,7 +311,7 @@
 								<p>winter is comming</p>
 							</div>
 						</li>
-						
+
 						<li class="col-lg-4 col-md-4 col-sm-6 col-sx-12 wow zoomInDown">
 							<div class="img-holder">
 								<img src="img/lannister.jpg" alt="lannister" />
@@ -310,7 +321,7 @@
 								<p>hear me roar</p>
 							</div>
 						</li>
-						
+
 						<li class="col-lg-4 col-md-4 col-sm-6 col-sx-12 wow zoomInRight">
 							<div class="img-holder">
 								<img src="img/redWedding.jpg" alt="martell" />
@@ -358,23 +369,18 @@
 						</li>
 						<li class="col-lg-4 col-md-4 col-sm-6 col-sx-12 wow slideInUp">
 							<div class="img-holder">
-								<img src="img/redWedding.jpg" alt="barathon" />
+								<img src="img/lannister.jpg" alt="barathon" />
 							</div>
 							<div class="details">
 								<h4>Baratheon</h4>
 								<p>ours is the fury</p>
 							</div>
 						</li>
-						
 
-						
-						
 					</ul>
 				</div>
 			</div>
-			
-			
-			
+
 			<!----------------------------------------------------------->
 			<div class="met-index-body" id="section-8th">
 				<div class="lazy">
@@ -390,8 +396,8 @@
 						</ul>
 					</div>
 				</div>
-				
-			</div>			
+
+			</div>
 		</div>
 	</body>
 	<script src="js/js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
@@ -400,7 +406,7 @@
 	<script src="js/js/easypiechar.js" type="text/javascript" charset="utf-8"></script>
 	<script src="js/js/style.js" type="text/javascript" charset="utf-8"></script>
 	<script type="text/javascript">
-		if (!(/msie [6|7|8|9]/i.test(navigator.userAgent))) {
+		if(!(/msie [6|7|8|9]/i.test(navigator.userAgent))) {
 			var wow = new WOW({
 				boxClass: 'wow',
 				animateClass: 'animated',
@@ -408,10 +414,10 @@
 				mobile: true,
 				live: true
 			});
-	
+
 			wow.init();
 		};
 	</script>
-		<script src="js/codeFall.js" type="text/javascript" charset="utf-8"></script>
-	
+	<script src="js/codeFall.js" type="text/javascript" charset="utf-8"></script>
+
 </html>
