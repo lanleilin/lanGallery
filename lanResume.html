@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>个人网页</title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/animate.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<link rel="icon" type="image/x-icon" href="img/logo2.png">
+	</head>
+	<script type="text/javascript">
+		 window.onload = function(){
+		    	var html = document.documentElement;
+		    	var hWidth = html.getBoundingClientRect().width;
+				html.style.fontSize = hWidth/70 + "px";
+		}
+	</script>
+	<body>
+		<div class="navbar navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a href="index.html" class="navbar-brand hidden-sm">resume</a>
+				</div>
+				<div class="navbar-collapse collapse">
+					<ul class="nav navbar-nav">
+						<li><a href="#section-2nd">基本信息</a></li>
+						<li><a href="#section-3rd">教育背景</a></li>
+						<li><a href="#section-4th">工作经验</a></li>
+						<li><a href="#section-5th">掌握技能</a></li>
+						<li><a href="#section-6th">作品展示</a></li>
+						<li><a href="#section-7th">图片展示</a></li>
+						<li><a href="#section-8th">联系方式</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+		<!--返回顶部-->
+		<div class="toTop"><span></span></div>
+		<div id="music" class="music">
+			<audio id="music-audio" class="audio" src="http://lxcdn.rabbitpre.com/531715f7-da56-48ba-8714-3ad383426d5d" loop="loop"  preload="auto"></audio>
+			<div class="control">
+				<div class="control-after"></div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			oV = document.getElementById('music-audio');
+			oC = document.querySelector('.control');
+//			oM = document.getElementById('music');
+			
+			oC.onclick = function(){
+				if(oV.paused){
+					oV.play();
+					$('#music').removeClass('stopped')
+				}else{
+					oV.pause();
+					$('#music').addClass('stopped')
+				}
+				
+			};
+		</script>
+		<!--大图-->
+		<div id="section-1st">
+			<div class="container-fluid">
+				<div class="inf wow fadeInUp">
+					<h2>兰磊林</h2>
+					<p>前端开发工程师</p>
+				</div>
+				<!--<div class="sec-1st-bg"></div>-->
+						<div align="center">
+			<!--<h3 id="theMatrix">点击图片转入相应网站</h3>-->
+			<canvas id="q"></canvas>
+		</div>
+			</div>
+		</div>
+		
+		
+		<div class="content">
+			<div class="met-index-body" id="section-2nd">
+				<div class="container">
+					<h3 class="wow fadeInUp">个人简介</h3>
+					<div class="desc row">
+						<!--<div class="pic wow flipInX"></div>-->
+						<ul class="main row">
+							<li class="col-lg-4 col-md-3 col-sm-2"></li>
+							<li class="col-lg-2 col-md-3 col-sm-4 col-xs-12 wow fadeInLeftBig">
+								<p>姓名: <span>兰磊林</span></p>
+								<p>性别：<span>男</span></p>
+								<p>学历：<span>本科</span></p>
+								<p>现居地：<span>广州</span></p>
+								<p>籍贯：<span>江西鹰潭</span></p>
+							</li>
+							<li class="col-lg-3 col-md-4 col-sm-5 col-xs-12 wow fadeInRightBig">
+								<p>&nbsp;</p>
+								<p>出生日期：<span>1994.11.10</span></p>	
+								<p>毕业院校：<span>南昌航空大学</span></p>
+								<p>英语：<span>六级，读写流利</span></p>
+								<p>兴趣：<span>编程，英语，游泳</span></p>
+							</li>
+							<li class="col-lg-3 col-md-2 col-sm-1"></li>
+						</ul>
+					</div>	
+				</div>
+			</div>
+			
+			<div class="met-index-body" id="section-3rd">
+				<div class="lazy">
+					<div class="container">
+						<h3 class="wow fadeInUp">教育背景</h3>
+						<div class="main">
+							<ul>
+								<li class="row">
+									<div class="theme col-xs-10 col-sm-12 col-md-3 col-lg-3 wow bounceInLeft">
+										<span class="school wow slideInLeft">南昌航空大学</span>
+										<span class="time wow slideInRight">2013.09~2017.07</span>
+									</div>
+									<div class="desc col-xs-10 col-sm-12 col-md-9 col-lg-9 wow bounceInRight">
+										<h4>金属材料工程&nbsp;&nbsp;&nbsp;本科</h4>
+										<p>主修：高数，英语，C语言</p>
+									</div>
+								</li>
+								<li class="row">
+									<div class="theme col-xs-10 col-sm-12 col-md-3 col-lg-3 wow bounceInLeft">技能证书</div>
+									<div class="desc col-xs-10 col-sm-12 col-md-9 col-lg-9 wow bounceInRight">
+										<p>大学四六级证书；国家卓越工程师证书</p>
+									</div>
+								</li>
+								
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="met-index-body" id="section-4th">
+				<!--<div class="bg-gif"></div>
+				<div class="bg-cloud"></div>-->
+				<div class="container">
+					<h3 class="wow fadeInUp">工作经验</h3>
+					<div class="mian row">
+						<div class="preface col-lg-5 col-md-5 col-sm-11 col-sm-11">
+							<h4 class="wow slideInUp">前言</h4>
+							<p class="wow slideInUp">&nbsp;&nbsp;&nbsp;&nbsp;大二开始学习编程，自学web的前端开发，大四进入IT公司实习</p>
+						</div>
+						<div class="exprient col-lg-5 col-md-5 col-sm-11 col-sm-11">
+							<div class="year">
+								<span class="circle"></span>
+								<div class="info wow slideInUp">
+									<h4>南昌云端网络科技有限公司</h4>
+									<p class="role">web前端开发工程师</p>
+									<p class="time">2016.10—2017.5</p>
+									<p class="des">1  使用 html5、css3，Less ，zepto，jQuery等技术制作网页</br>
+										2  前后端分离，使用AJAX与后台交互，编写JS控件；</br>
+										3  使用git进行版本控制；webpack作为构建工具，nodejs作为服务端；</br>
+										4  用vue.js开发前端功能组件,使用animate.css实现动画效果；</br>
+										5  优化前端代码的质量，包括体验和响应速度；</br>
+									</p>
+								</div>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="met-index-body" id="section-5th" >
+				<div class="container">
+					<h3 class="wow fadeInUp">掌握技能</h3>
+					<p class="desc wow fadeIn">
+						1，掌握 JS，CSS，HTML等Web开发技能,熟悉HTML5,CSS3,ES6新特性；</br>
+						2，熟练rem,Flex,Grid和传统布局精确还原设计图，搭建健壮的移动端和PC端网站</br>
+						3，熟练使用LESS,SCSS,熟练Bootstrap搭建响应式网站；熟练使用Jquery,zepto；</br>
+						4，熟练Javascript面向对象编程, 能独立编写JS控件;</br>
+						5，熟悉VueJS, 掌握Element-UI，熟悉nodejs,webpack等常用开发工具； </br>
+						6,  熟悉Hbuilder,WebStrom，PS等工具的使用，熟练git的使用；</br>
+						7，了解Express后端框架，了解Mongodb数据库；</br>
+						8,  乐于优化web性能，无障碍阅读中英文文档；</br>
+					</p>
+					
+					<div class="main">
+						<ul class="row">
+							<li class="col-xs-12 col-sm-6  col-md-3  skill wow fadeInDown ">
+								<span class="chart" data-percent="80">
+									<span class="percent" ></span>
+									<canvas id="process1" width="152" height="152"></canvas>
+								</span>
+								<h4>HTML5</h4>
+							</li>
+							<li class="col-xs-12 col-sm-6 col-md-3  skill wow fadeInDown">
+								<span class="chart" data-percent="80">
+									<span class="percent"></span>
+									<canvas width="152" height="152"></canvas>
+								</span>
+								<h4>CSS3</h4>
+							</li>
+							<li class="col-xs-12 col-sm-6 col-md-3  skill wow flipInX">
+								<span class="chart" data-percent="80">
+									<span class="percent"></span>
+									<canvas width="152" height="152"></canvas>
+								</span>
+								<h4>JS</h4>
+							</li>
+							<li class="col-xs-12  col-sm-6  col-md-3  skill wow fadeInRight">
+								<span class="chart" data-percent="80">
+									<span class="percent" ></span>
+									<canvas width="152" height="152"></canvas>
+								</span>
+								<h4>jQuery</h4>
+							</li>
+							<li class="col-xs-12 col-sm-6 col-md-3  skill wow fadeInDown">
+								<span class="chart" data-percent="70">
+									<span class="percent"></span>
+									<canvas width="152" height="152"></canvas>
+								</span>
+								<h4>Bootstrap</h4>
+							</li>
+							<li class="col-xs-12 col-sm-6  col-md-3 skill wow fadeInDown">
+								<span class="chart" data-percent="60">
+									<span class="percent"></span>
+									<canvas width="152" height="152"></canvas>
+								</span>
+								<h4>NodeJS</h4>
+							</li>
+							
+							<li class="col-xs-12 col-sm-6  col-md-3  skill wow  flipInX">
+								<span class="chart" data-percent="70">
+									<span class="percent" ></span>
+									<canvas width="152" height="152"></canvas>
+								</span>
+								<h4>VueJS</h4>
+							</li>
+							<li class="col-xs-12 col-sm-6 col-md-3 skill wow fadeInRight">
+								<span class="chart" data-percent="60">
+									<span class="percent" ></span>
+									<canvas width="152" height="152"></canvas>
+								</span>
+								<h4>Photoshop</h4>
+							</li>
+							
+						</ul>
+					</div>
+				</div>
+			</div>
+			
+			
+			<!----------------------------------------------------------->
+			
+			
+			<div class="met-index-body" id="section-6th">
+				<div class="container">
+					<h3 class="wow fadeInUp">作品展示</h3>
+					<div class="main">
+						<ul class="row">
+							<li class="col-md-4 col-sm-6 col-xs-12 wow fadeInDown">
+								<a href="https://lanleilin.github.io/myCyber/dist/index.html" target="_blank" style="background: url(img/002.png) no-repeat center;">Github项目（个人网站，移动端）</a>
+							</li>
+							<li class="col-md-4 col-sm-6 col-xs-12 wow flipInX">
+								<a href="https://www.ekuaibao.com/" target="_blank" style="background: url(img/003.png) no-repeat center;">北京合思信息技术有限公司-易快报（公司门户web平台，响应式）</a>
+							</li>
+							<li class="col-md-4 col-sm-6 col-xs-12 wow fadeInRight">
+								<a href="http://kyxaas.com/" target="_blank" style="background: url(img/004.png) no-repeat center;">江西开云信息技术有限公司（公司官网 PC端）</a>
+							</li>
+							<li class="col-md-4 col-sm-6 col-xs-12 wow flipInX">
+								<a href="http://m.ncljkj.com/" target="_blank" style="background: url(img/005.png) no-repeat center;">南昌朗杰科技有限公司（公司门户网站 PC端+移动端）</a>
+							</li>
+							<li class="col-md-4 col-sm-6 col-xs-12 wow fadeInDown">
+								<a href="https://lanleilin.github.io/responsiveWebkz/index.html" target="_blank" style="background: url(img/006.png) no-repeat center;">singleWeb-响应式</a>
+							</li>
+							<li class="col-md-4 col-sm-6 col-xs-12 wow fadeInRight">
+								<a href="https://lanleilin.github.io/newZhihu/newZhihu4/homePage.html" target="_blank" style="background: url(img/007.png) no-repeat center;">仿知乎-移动端</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				
+			</div>
+			
+			
+			<!----------------------------------------------------------->
+			<div class="met-index-body" id="section-7th">
+				<div class="container">
+					<h3 class="wow slideInUp">oldDays</h3>
+					<p class="desc wow fadeIn">old days should burn</p>
+					<ul id="imgs" class="row">
+						<li class="col-lg-4 col-md-4 col-sm-6 col-sx-12 wow zoomInLeft">
+							<div class="img-holder">
+								<img src="img/starks.jpg" alt="stark" />
+							</div>
+							<div class="details">
+								<h4>stark</h4>
+								<p>winter is comming</p>
+							</div>
+						</li>
+						
+						<li class="col-lg-4 col-md-4 col-sm-6 col-sx-12 wow zoomInDown">
+							<div class="img-holder">
+								<img src="img/lannister.jpg" alt="lannister" />
+							</div>
+							<div class="details">
+								<h4>lannister</h4>
+								<p>hear me roar</p>
+							</div>
+						</li>
+						
+						<li class="col-lg-4 col-md-4 col-sm-6 col-sx-12 wow zoomInRight">
+							<div class="img-holder">
+								<img src="img/redWedding.jpg" alt="martell" />
+							</div>
+							<div class="details">
+								<h4>martell</h4>
+								<p>unbent unbow unbroken</p>
+							</div>
+						</li>
+						<li class="col-lg-4 col-md-4 col-sm-6 col-sx-12 wow bounceInLeft">
+							<div class="img-holder">
+								<img src="img/starks.jpg" alt="targeryen" />
+							</div>
+							<div class="details">
+								<h4>targeryen</h4>
+								<p>fire and blood</p>
+							</div>
+						</li>
+						<li class="col-lg-4 col-md-4 col-sm-6 col-sx-12 wow bounceInRight">
+							<div class="img-holder">
+								<img src="img/redWedding.jpg" alt="greyjoy" />
+							</div>
+							<div class="details">
+								<h4>greyjoy</h4>
+								<p>we do not sow</p>
+							</div>
+						</li>
+						<li class="col-lg-4 col-md-4 col-sm-6 col-sx-12 wow bounceInUp">
+							<div class="img-holder">
+								<img src="img/starks.jpg" alt="alin" />
+							</div>
+							<div class="details">
+								<h4>arin</h4>
+								<p>as high as honor</p>
+							</div>
+						</li>
+						<li class="col-lg-4 col-md-4 col-sm-6 col-sx-12 wow slideInUp">
+							<div class="img-holder">
+								<img src="img/starks.jpg" alt="tyrell" />
+							</div>
+							<div class="details">
+								<h4>tyrell</h4>
+								<p>growing strong</p>
+							</div>
+						</li>
+						<li class="col-lg-4 col-md-4 col-sm-6 col-sx-12 wow slideInUp">
+							<div class="img-holder">
+								<img src="img/redWedding.jpg" alt="barathon" />
+							</div>
+							<div class="details">
+								<h4>Baratheon</h4>
+								<p>ours is the fury</p>
+							</div>
+						</li>
+						
+
+						
+						
+					</ul>
+				</div>
+			</div>
+			
+			
+			
+			<!----------------------------------------------------------->
+			<div class="met-index-body" id="section-8th">
+				<div class="lazy">
+					<div class="container">
+						<h3 class="wow fadeInUp">联系方式</h3>
+						<ul class="main">
+							<li class="pic wow slideInLeft"><span></span></li>
+							<li class="contect wow slideInRight">
+								<p>电话：18824109009</p>
+								<p>邮箱：2476081528@qq.com</p>
+								<p>地址：广州市天河</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+				
+			</div>			
+		</div>
+	</body>
+	<script src="js/js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/js/wow.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/js/easypiechar.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/js/style.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		if (!(/msie [6|7|8|9]/i.test(navigator.userAgent))) {
+			var wow = new WOW({
+				boxClass: 'wow',
+				animateClass: 'animated',
+				offset: 150,
+				mobile: true,
+				live: true
+			});
+	
+			wow.init();
+		};
+	</script>
+		<script src="js/codeFall.js" type="text/javascript" charset="utf-8"></script>
+	
+</html>
