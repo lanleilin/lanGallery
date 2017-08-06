@@ -9,11 +9,13 @@
 		<link rel="icon" type="image/x-icon" href="img/logo2.png">
 	</head>
 	<script type="text/javascript">
-		 window.onload = function(){
-		    	var html = document.documentElement;
+
+		(function(){
+					    	var html = document.documentElement;
 		    	var hWidth = html.getBoundingClientRect().width;
 				html.style.fontSize = hWidth/70 + "px";
-		}
+				console.log(hWidth);
+		})();
 	</script>
 	<body>
 		<div class="navbar navbar-fixed-top">
@@ -66,16 +68,17 @@
 		</script>
 		<!--大图-->
 		<div id="section-1st">
+									<div align="center">
+			<canvas id="q"></canvas>
+		</div>
 			<div class="container-fluid">
+				
 				<div class="inf wow fadeInUp">
 					<h2>兰磊林</h2>
 					<p>前端开发工程师</p>
 				</div>
 				<!--<div class="sec-1st-bg"></div>-->
-						<div align="center">
-			<!--<h3 id="theMatrix">点击图片转入相应网站</h3>-->
-			<canvas id="q"></canvas>
-		</div>
+
 			</div>
 		</div>
 		
