@@ -73,7 +73,7 @@ $(document).ready(function() {
 //				arr[parseInt(Math.random() * 16)] +
 //				arr[parseInt(Math.random() * 16)];
 //			ctx.fillStyle = color;
-			ctx.fillStyle = 'red'
+			ctx.fillStyle = 'lightgreen'
 			ctx.font = '10pt Georgia';
 			yPositions.map(function(y, index) {
 				text = String.fromCharCode(1e2 + Math.random() * 33);
