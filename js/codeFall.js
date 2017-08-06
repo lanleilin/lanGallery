@@ -47,8 +47,8 @@ $(document).ready(function() {
 			Game_Interval = setInterval(draw, 40);
 		}
 		//resume
-		var section=document.getElementById('section-1st');
-		section.style.display='none';
+		var section = document.getElementById('section-1st');
+		section.style.display = 'none';
 	} else {
 		var s = window.screen;
 		//      var q=$('#q');
@@ -63,7 +63,17 @@ $(document).ready(function() {
 		var draw = function() {
 			ctx.fillStyle = 'rgba(0,0,0,.05)';
 			ctx.fillRect(0, 0, width, height);
-			ctx.fillStyle = 'red';
+			//生成随机颜色
+//			var arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'a', 'b', 'c', 'd', 'e', 'f'];
+//			var color = '#' +
+//				arr[parseInt(Math.random() * 16)] +
+//				arr[parseInt(Math.random() * 16)] +
+//				arr[parseInt(Math.random() * 16)] +
+//				arr[parseInt(Math.random() * 16)] +
+//				arr[parseInt(Math.random() * 16)] +
+//				arr[parseInt(Math.random() * 16)];
+//			ctx.fillStyle = color;
+			ctx.fillStyle = 'red'
 			ctx.font = '10pt Georgia';
 			yPositions.map(function(y, index) {
 				text = String.fromCharCode(1e2 + Math.random() * 33);
