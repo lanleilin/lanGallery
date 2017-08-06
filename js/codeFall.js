@@ -48,7 +48,11 @@ $(document).ready(function() {
 		}
 		//resume
 		var section = document.getElementById('section-1st');
+		if(section){
 		section.style.display = 'none';
+			
+		}
+//		section.style.display = 'none';
 	} else {
 		var s = window.screen;
 		//      var q=$('#q');
