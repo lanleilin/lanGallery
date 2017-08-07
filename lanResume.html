@@ -19,6 +19,23 @@
 	</script>
 	<script src="js/js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
 	<script src="js/codeFall.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/js/wow.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/js/easypiechar.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/js/style.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		if(!(/msie [6|7|8|9]/i.test(navigator.userAgent))) {
+			var wow = new WOW({
+				boxClass: 'wow',
+				animateClass: 'animated',
+				offset: 150,
+				mobile: true,
+				live: true
+			});
+
+			wow.init();
+		};
+	</script>
 	<body>
 		<div class="navbar navbar-fixed-top">
 			<div class="container">
@@ -405,22 +422,5 @@
 		</div>
 	</body>
 
-	<script src="js/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
-	<script src="js/js/wow.min.js" type="text/javascript" charset="utf-8"></script>
-	<script src="js/js/easypiechar.js" type="text/javascript" charset="utf-8"></script>
-	<script src="js/js/style.js" type="text/javascript" charset="utf-8"></script>
-	<script type="text/javascript">
-		if(!(/msie [6|7|8|9]/i.test(navigator.userAgent))) {
-			var wow = new WOW({
-				boxClass: 'wow',
-				animateClass: 'animated',
-				offset: 150,
-				mobile: true,
-				live: true
-			});
-
-			wow.init();
-		};
-	</script>
 
 </html>
